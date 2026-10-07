@@ -9,9 +9,10 @@ Maverich is an AI learning companion for people with a real goal. It turns the c
 | File | Purpose |
 |---|---|
 | `index.html` | The whole landing page (all copy lives here) |
-| `styles.css` | Design tokens (CSS variables), base, layout, header, hero, footer, dark mode |
-| `components.css` | Request-access form, hero product demo, feature cards, tabs, chips, FAQ, CTA band, scroll reveal |
-| `script.js` | Demo auto-advance + typing, accessible tabs, form validation (opens a pre-filled email), scroll reveal. Page works without it. |
+| `styles.css` | Tokens, per-section themes (`.theme-dark` / `.theme-light`), base, pills, header, hero, footer |
+| `components.css` | Statements (word reveal), chapters 01–04 with sticky index, glass mini-UIs, proof tabs, numeral, goals marquee, FAQ, access form, reveal |
+| `script.js` | Header theme follows the chapter under it, scroll word reveal, chapter index, accessible tabs, marquee loop, form validation (opens a pre-filled email), reveal. Page works without it. |
+| `hero-canvas.js` | Generative hero background: drifting content particles, constellation links, owned dots on the ring. Static frame under reduced motion. |
 | `404.html` | Not-found page served by GitHub Pages |
 | `favicon.svg` | Maverich mark (filled core inside an open ring) |
 | `og-image.png` | 1200×630 social card |
@@ -27,7 +28,7 @@ python3 -m http.server -d . 8080
 # open http://localhost:8080
 ```
 
-Change text in `index.html`. Change colors and fonts in the `:root` block at the top of `styles.css`. The request-access form has no backend: it opens the visitor's mail app with a pre-filled message to `victor@maver1ch.world`. Swap in a form service later if volume grows.
+Change text in `index.html`. Colors live in the `.theme-dark` / `.theme-light` blocks at the top of `styles.css`; the page alternates dark and light chapters on purpose and ignores the OS color scheme. The request-access form has no backend: it opens the visitor's mail app with a pre-filled message to `victor@maver1ch.world`. Swap in a form service later if volume grows.
 
 ## Deploy
 

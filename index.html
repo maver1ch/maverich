@@ -6,8 +6,7 @@
   <title>Maverich — Own what you learn</title>
   <meta name="description" content="Maverich is an AI learning companion that turns the content you save into skills you can prove. Private beta — request access.">
   <link rel="canonical" href="https://maver1ch.world/">
-  <meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#121412" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#0A0C0B">
 
   <!-- Social cards -->
   <meta property="og:type" content="website">
@@ -34,7 +33,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
+  <header class="site-header" data-nav-theme="dark">
     <nav class="container nav" aria-label="Main">
       <a class="brand" href="#top" aria-label="Maverich, back to top">
         <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
@@ -44,196 +43,197 @@
         <span>Maverich</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#why">Why</a></li>
         <li><a href="#how">How it works</a></li>
+        <li><a href="#proof">Proof</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
-      <a class="btn btn-primary btn-small" href="#access">Request access</a>
+      <a class="pill pill-solid" href="#access">Request access <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
   <main id="main">
-    <!-- ===== Hero: pitch + request-access form, product demo card on the right ===== -->
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="pulse" aria-hidden="true"></span>Private beta · Built on Claude</p>
-          <h1 id="hero-title">Stop collecting.<br> Start <em>owning</em> what you learn.</h1>
-          <p class="hero-sub">Maverich turns the articles, videos and courses you save into skills you can prove — starting from your real goal.</p>
-
-          <form class="access-form" id="access" data-access-form novalidate>
-            <label class="visually-hidden" for="email-hero">Email address</label>
-            <div class="access-row">
-              <input id="email-hero" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@company.com" required>
-              <button class="btn btn-primary" type="submit">Request access</button>
-            </div>
-            <p class="access-hint" data-status aria-live="polite">We onboard in small batches. No spam, ever.</p>
-          </form>
+    <!-- ===== Hero: generative canvas + one statement ===== -->
+    <section class="hero theme-dark" id="top" data-chapter-theme="dark" aria-labelledby="hero-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <canvas class="hero-canvas" data-hero-canvas aria-hidden="true"></canvas>
+      <div class="hero-inner">
+        <p class="eyebrow"><span class="pulse" aria-hidden="true"></span>Private beta · Built on Claude</p>
+        <h1 id="hero-title">Stop collecting.<br>Start <em>owning</em><br>what you learn.</h1>
+        <div class="hero-actions">
+          <a class="pill pill-solid" href="#access">Request access <span aria-hidden="true">↗</span></a>
+          <a class="pill pill-line" href="#how">See how it works</a>
         </div>
+      </div>
+      <a class="scroll-cue" href="#statement-1" aria-label="Scroll to read more"><span></span></a>
+    </section>
 
-        <!-- Product demo: three states that auto-advance; tabs below let people step through -->
-        <div class="demo" data-demo>
-          <div class="demo-window" role="group" aria-label="Product preview">
-            <div class="demo-bar"><span></span><span></span><span></span><em>Maverich</em></div>
-
-            <div class="demo-panels">
-              <div class="demo-panel is-active" data-panel="0">
-                <p class="demo-label">Your goal</p>
-                <p class="demo-goal">Find a startup idea worth a year of my life.</p>
-                <p class="demo-meta">Everything you save is measured against this.</p>
-              </div>
-
-              <div class="demo-panel" data-panel="1">
-                <p class="demo-label">Saved just now</p>
-                <div class="demo-item">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
-                  <div><strong>How to Get Startup Ideas</strong><span>Essay · 28 min</span></div>
-                </div>
-                <div class="demo-bubble">
-                  <p data-typewriter="Before the next tab — what would show you own this one?">Before the next tab — what would show you own this one?</p>
-                </div>
-              </div>
-
-              <div class="demo-panel" data-panel="2">
-                <p class="demo-label">Your proof</p>
-                <ul class="demo-choices">
-                  <li class="is-picked"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Notice 1 real problem today, in my own words</li>
-                  <li>Explain "live in the future" to a friend</li>
-                  <li>Skip for now</li>
-                </ul>
-                <p class="demo-meta demo-owned"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Owned · 1 of 3 ideas from this essay</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="demo-steps" role="tablist" aria-label="Preview steps">
-            <button type="button" role="tab" aria-selected="true" data-step="0"><i aria-hidden="true"></i>Goal</button>
-            <button type="button" role="tab" aria-selected="false" data-step="1"><i aria-hidden="true"></i>Save</button>
-            <button type="button" role="tab" aria-selected="false" data-step="2"><i aria-hidden="true"></i>Prove</button>
-          </div>
-        </div>
+    <!-- ===== Statement 1 (light): scroll word reveal ===== -->
+    <section class="statement theme-light" id="statement-1" data-chapter-theme="light" aria-label="The problem">
+      <div class="fade fade-dark-to-light" aria-hidden="true"></div>
+      <div class="container">
+        <p class="statement-text" data-word-reveal>Everything you saved was worth reading. <em>You still own none of it.</em></p>
+        <p class="statement-sub reveal">Reading, watching and saving feel like progress. Maverich asks for proof instead — starting from your real goal.</p>
       </div>
     </section>
 
-    <!-- ===== Why: three short cards ===== -->
-    <section class="section" id="why" aria-labelledby="why-title">
+    <!-- ===== Chapters 01–04 (dark): sticky index + panels ===== -->
+    <section class="chapters theme-dark" id="how" data-chapter-theme="dark" aria-labelledby="how-title">
+      <div class="fade fade-light-to-dark" aria-hidden="true"></div>
       <div class="container">
-        <h2 class="section-title reveal" id="why-title">Consuming feels like progress.<br>Owning is.</h2>
-        <ul class="feature-grid">
-          <li class="feature reveal">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg>
-            <h3>Your goal is the unit</h3>
-            <p>Not the article. Content only counts if it moves the goal.</p>
-          </li>
-          <li class="feature reveal">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="5"/></svg>
-            <h3>One question before the next tab</h3>
-            <p>What would prove you own the last one? Then you move on.</p>
-          </li>
-          <li class="feature reveal">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12h6M9 16h4M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/></svg>
-            <h3>Proof fits the knowledge</h3>
-            <p>Explain a concept. Do a skill. Apply a mindset.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
+        <h2 class="chapter-lede" id="how-title">One goal. Everything you save, <em>measured against it.</em></h2>
+        <div class="chapters-grid" data-chapters>
+          <nav class="chapters-nav" aria-label="Steps">
+            <ol>
+              <li><a href="#ch-goal" aria-current="true"><span>01</span>Goal</a></li>
+              <li><a href="#ch-capture"><span>02</span>Capture</a></li>
+              <li><a href="#ch-prove"><span>03</span>Prove</a></li>
+              <li><a href="#ch-own"><span>04</span>Own</a></li>
+            </ol>
+          </nav>
 
-    <!-- ===== How it works: tabs ===== -->
-    <section class="section" id="how" aria-labelledby="how-title">
-      <div class="container">
-        <h2 class="section-title reveal" id="how-title">How it works</h2>
-        <div class="how reveal" data-tabs>
-          <div class="how-tabs" role="tablist" aria-label="How it works">
-            <button type="button" role="tab" id="tab-goal" aria-controls="panel-goal" aria-selected="true"><span>01</span>Set a goal</button>
-            <button type="button" role="tab" id="tab-save" aria-controls="panel-save" aria-selected="false" tabindex="-1"><span>02</span>Save as usual</button>
-            <button type="button" role="tab" id="tab-prove" aria-controls="panel-prove" aria-selected="false" tabindex="-1"><span>03</span>Prove it</button>
-          </div>
-          <div class="how-panels">
-            <div class="how-panel" id="panel-goal" role="tabpanel" aria-labelledby="tab-goal">
+          <div class="chapter-panels">
+            <article class="chapter" id="ch-goal" data-chapter>
+              <p class="chapter-no">01 · Goal</p>
               <h3>Start from what you are trying to do.</h3>
-              <p>A new role, a company, a field you are teaching yourself. One goal at a time.</p>
-            </div>
-            <div class="how-panel" id="panel-save" role="tabpanel" aria-labelledby="tab-save" hidden>
-              <h3>Keep saving. Maverich links each item to your goal.</h3>
-              <p>Articles, videos, courses. Claude reads them with your goal in mind and keeps the parts that matter.</p>
-            </div>
-            <div class="how-panel" id="panel-prove" role="tabpanel" aria-labelledby="tab-prove" hidden>
-              <h3>Before the next one, show you own the last one.</h3>
-              <p>Maverich proposes the smallest practice step and checks your evidence. Owned ideas stay. The rest can go.</p>
-            </div>
+              <p>A new role. A company. A field you teach yourself. One goal at a time.</p>
+              <div class="glass goal-card">
+                <span class="glass-label">Current goal</span>
+                <strong>Find a startup idea worth a year of my life.</strong>
+                <div class="goal-meter"><i style="--v:0.25"></i><em>3 of 12 ideas owned</em></div>
+              </div>
+            </article>
+
+            <article class="chapter" id="ch-capture" data-chapter>
+              <p class="chapter-no">02 · Capture</p>
+              <h3>Keep saving. Maverich links each item to the goal.</h3>
+              <p>Articles, videos, courses. Claude reads them with your goal in mind and keeps only what moves it.</p>
+              <ul class="glass stack">
+                <li><span class="tag">Essay</span>How to Get Startup Ideas<em>2 ideas → goal</em></li>
+                <li><span class="tag">Video</span>Talking to users, done badly<em>1 skill → goal</em></li>
+                <li class="is-dim"><span class="tag">Thread</span>12 productivity hacks<em>No link · let go</em></li>
+              </ul>
+            </article>
+
+            <article class="chapter" id="ch-prove" data-chapter>
+              <p class="chapter-no">03 · Prove</p>
+              <h3>Before the next tab, show you own the last one.</h3>
+              <p>One question. The smallest practice step. Your evidence, checked.</p>
+              <div class="glass chat">
+                <p class="bubble bubble-ai">Before the next tab — what would show you own this one?</p>
+                <p class="bubble bubble-me">I'll notice one real problem today and write it in my own words.</p>
+                <p class="chat-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Checked tonight · 1 line</p>
+              </div>
+            </article>
+
+            <article class="chapter" id="ch-own" data-chapter>
+              <p class="chapter-no">04 · Own</p>
+              <h3>Owned ideas stay. The rest can go.</h3>
+              <p>Your proof becomes a record you can point to. Not a folder of tabs.</p>
+              <ul class="glass owned-grid">
+                <li class="is-owned">Live in the future</li>
+                <li class="is-owned">Notice real problems</li>
+                <li class="is-owned">Talk to users first</li>
+                <li>Schlep blindness</li>
+                <li>Organic ideas</li>
+                <li class="is-gone">12 hacks</li>
+              </ul>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== Built for ===== -->
-    <section class="section section-tight" id="who" aria-labelledby="who-title">
-      <div class="container who-row reveal">
-        <h2 class="who-title" id="who-title">Built for</h2>
-        <ul class="who-chips">
-          <li>Aspiring founders</li>
-          <li>Career switchers</li>
-          <li>Self-taught engineers</li>
-          <li>Anyone with a real goal and too many saved tabs</li>
+    <!-- ===== Proof tabs (light) ===== -->
+    <section class="proof theme-light" id="proof" data-chapter-theme="light" aria-labelledby="proof-title">
+      <div class="fade fade-dark-to-light" aria-hidden="true"></div>
+      <div class="container proof-inner">
+        <h2 class="statement-text statement-small" id="proof-title" data-word-reveal>Different knowledge, <em>different proof.</em></h2>
+        <div class="tabs" data-tabs>
+          <div class="tab-list" role="tablist" aria-label="Kinds of proof">
+            <button type="button" role="tab" id="t-concept" aria-controls="p-concept" aria-selected="true">Concept</button>
+            <button type="button" role="tab" id="t-skill" aria-controls="p-skill" aria-selected="false" tabindex="-1">Skill</button>
+            <button type="button" role="tab" id="t-mindset" aria-controls="p-mindset" aria-selected="false" tabindex="-1">Mindset</button>
+            <button type="button" role="tab" id="t-noise" aria-controls="p-noise" aria-selected="false" tabindex="-1">Noise</button>
+          </div>
+          <div class="tab-panel" id="p-concept" role="tabpanel" aria-labelledby="t-concept">
+            <h3>Explain it in your own words.</h3><p>If you cannot say it simply, you do not own it yet.</p>
+          </div>
+          <div class="tab-panel" id="p-skill" role="tabpanel" aria-labelledby="t-skill" hidden>
+            <h3>Learn it only while doing it.</h3><p>No skill content without a task that uses it today.</p>
+          </div>
+          <div class="tab-panel" id="p-mindset" role="tabpanel" aria-labelledby="t-mindset" hidden>
+            <h3>One at a time. Apply it before the next.</h3><p>A mindset you have not acted on is a quote.</p>
+          </div>
+          <div class="tab-panel" id="p-noise" role="tabpanel" aria-labelledby="t-noise" hidden>
+            <h3>Let it go.</h3><p>If it does not move the goal, Maverich says so. Nothing to prove.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Numeral (dark) ===== -->
+    <section class="numeral theme-dark" data-chapter-theme="dark" aria-label="The number">
+      <div class="fade fade-light-to-dark" aria-hidden="true"></div>
+      <div class="container numeral-inner">
+        <span class="numeral-glyph" aria-hidden="true">0</span>
+        <p class="numeral-text reveal">Hours a day go in. At the end of most days, this is how many ideas we own. <em>Let's change the number.</em></p>
+      </div>
+    </section>
+
+    <!-- ===== Goals marquee (light) ===== -->
+    <section class="goals theme-light" data-chapter-theme="light" aria-labelledby="goals-title">
+      <div class="fade fade-dark-to-light" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="chapter-lede" id="goals-title">Built for people <em>with a real goal.</em></h2>
+      </div>
+      <div class="marquee" data-marquee>
+        <ul class="marquee-track">
+          <li>Find a startup idea</li><li>Switch into ML engineering</li><li>Learn to sell</li><li>Ship a side project</li><li>Read one paper a week and keep it</li><li>Become a better manager</li><li>Write in public</li><li>Understand finance for founders</li>
         </ul>
       </div>
     </section>
 
-    <!-- ===== FAQ ===== -->
-    <section class="section" id="faq" aria-labelledby="faq-title">
+    <!-- ===== FAQ (light) ===== -->
+    <section class="faq-section theme-light" id="faq" data-chapter-theme="light" aria-labelledby="faq-title">
       <div class="container faq-grid">
-        <h2 class="section-title reveal" id="faq-title">Questions</h2>
+        <h2 class="chapter-lede" id="faq-title">Questions</h2>
         <div class="faq reveal">
-          <details name="faq" open>
-            <summary>Is the beta free?</summary>
-            <p>Yes. Beta access is free, and we will tell you before anything changes.</p>
-          </details>
-          <details name="faq">
-            <summary>What do I need to start?</summary>
-            <p>A real goal and the content you already save. That is it.</p>
-          </details>
-          <details name="faq">
-            <summary>How does Maverich use AI?</summary>
-            <p>Maverich is built on Claude. It links what you save to your goal, proposes the next practice step and reviews your evidence. Your content stays yours.</p>
-          </details>
-          <details name="faq">
-            <summary>When will I get access?</summary>
-            <p>We onboard in small batches and reply to every request personally.</p>
-          </details>
+          <details name="faq" open><summary>Is the beta free?</summary><p>Yes. Beta access is free, and we will tell you before anything changes.</p></details>
+          <details name="faq"><summary>What do I need to start?</summary><p>A real goal and the content you already save. That is it.</p></details>
+          <details name="faq"><summary>How does Maverich use AI?</summary><p>Maverich is built on Claude. It links what you save to your goal, proposes the next practice step and reviews your evidence. Your content stays yours.</p></details>
+          <details name="faq"><summary>When will I get access?</summary><p>We onboard in small batches and reply to every request personally.</p></details>
         </div>
       </div>
     </section>
 
-
-    <!-- ===== Final CTA ===== -->
-    <section class="cta" aria-labelledby="cta-title">
-      <div class="container">
-        <div class="cta-inner reveal">
-          <h2 id="cta-title">Ready to own what you learn?</h2>
-          <form class="access-form" data-access-form novalidate>
-            <label class="visually-hidden" for="email-cta">Email address</label>
-            <div class="access-row">
-              <input id="email-cta" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@company.com" required>
-              <button class="btn btn-invert" type="submit">Request access</button>
-            </div>
-            <p class="access-hint" data-status aria-live="polite">Or write to <a href="mailto:victor@maver1ch.world">victor@maver1ch.world</a></p>
-          </form>
-        </div>
+    <!-- ===== Final CTA (dark) ===== -->
+    <section class="cta theme-dark" id="access" data-chapter-theme="dark" aria-labelledby="cta-title">
+      <div class="fade fade-light-to-dark" aria-hidden="true"></div>
+      <div class="cta-glow" aria-hidden="true"></div>
+      <div class="container cta-inner">
+        <h2 class="statement-text" id="cta-title" data-word-reveal>Tell us one goal. <em>We'll show you the first proof.</em></h2>
+        <form class="access-form" data-access-form novalidate>
+          <label class="visually-hidden" for="email-cta">Email address</label>
+          <div class="access-row">
+            <input id="email-cta" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@company.com" required>
+            <button class="pill pill-solid" type="submit">Request access <span aria-hidden="true">↗</span></button>
+          </div>
+          <p class="access-hint" data-status aria-live="polite">Private beta. Small batches. No spam, ever.</p>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer theme-dark">
     <div class="container footer-inner">
       <span>© 2026 Maverich</span>
-      <span aria-hidden="true">·</span>
       <a href="mailto:victor@maver1ch.world">victor@maver1ch.world</a>
-      <span aria-hidden="true">·</span>
-      <a href="https://github.com/maver1ch">GitHub</a>
+      <a href="https://github.com/maver1ch" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
     </div>
+    <div class="footer-mark" aria-hidden="true">Maverich</div>
   </footer>
 
+  <script src="hero-canvas.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>
