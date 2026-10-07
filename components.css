@@ -1,6 +1,6 @@
 /*
  * Maverich landing page — interactive components.
- * Access form → product demo → feature cards → how-it-works tabs → chips → FAQ → founder → CTA → scroll reveal.
+ * Access form → product demo → feature cards → how-it-works tabs → chips → FAQ → CTA → scroll reveal.
  * Relies on tokens from styles.css.
  */
 
@@ -169,13 +169,6 @@
   .faq-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: var(--s6); align-items: start; }
   .faq-grid .section-title { margin-bottom: 0; }
 }
-
-/* ---------- Founder ---------- */
-.founder { display: grid; gap: var(--s3); }
-.founder-body { display: grid; gap: var(--s2); max-width: 640px; }
-.founder-name { font-family: var(--font-serif); font-size: 2rem; line-height: 1.1; }
-.founder-bio { color: var(--muted); }
-.founder-links { display: flex; flex-wrap: wrap; gap: var(--s4); margin-top: var(--s2); }
 
 /* ---------- CTA band ---------- */
 .cta { padding-block: 0 var(--s7); }
